@@ -3,9 +3,6 @@ declared-services:
   twilio:
     label: Twilio
     plan: 'user-provided'
-  Slack:
-    label: Slack
-    plan: 'user-provided'
   speech_to_text:
     label: speech_to_text
     plan: free
@@ -17,4 +14,4 @@ applications:
   services:
   - twilio
   - speech_to_text
-  - Slack
+  
