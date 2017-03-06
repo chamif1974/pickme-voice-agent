@@ -3,8 +3,8 @@ declared-services:
   twilio:
     label: Twilio
     plan: 'user-provided'
-  slackbot_webhook:
-    label: slackbot_webhook
+  slack_webhooks:
+    label: slack_webhooks
     plan: 'user-provided'   
   speech_to_text:
     label: speech_to_text
@@ -17,4 +17,4 @@ applications:
   services:
   - twilio
   - speech_to_text
-  - slackbot_webhook
+  - slack_webhooks
