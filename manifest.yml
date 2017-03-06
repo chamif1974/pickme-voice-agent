@@ -1,8 +1,20 @@
+---
+declared-services:
+  twilio:
+    label: Twilio
+    plan: 'user-provided'
+  slack_webhooks:
+    label: slack_webhooks
+    plan: 'user-provided'
+  speech_to_text:
+    label: speech_to_text
+    plan: free
 applications:
-- path: .
-  memory: 256M
-  instances: 1
-  domain: mybluemix.net
-  name: pickme-voice-agent
-  host: pickme-voice-agent
-  disk_quota: 1024M
+- name: pickme-voice-agent 
+  memory: 256M 
+  command: node app.js
+  buildpack: https://github.com/jthomas/nodejs-buildpack.git
+  services:
+  - twilio
+  - speech_to_text
+  - slack_webhooks
